@@ -23,25 +23,26 @@ export function Experience() {
 
         <div className="relative">
           {/* Timeline line */}
-          <div className="absolute left-1/2 transform -translate-x-px h-full w-0.5 bg-gradient-to-b from-purple-400 to-gray-600" />
+          <div className="absolute left-4 md:left-1/2 top-0 h-full w-0.5 bg-gradient-to-b from-purple-400 to-gray-600 md:-translate-x-px" />
 
           <div className="space-y-12">
             {TIMELINE_EVENTS.map((event, index) => (
               <motion.div
                 key={event.year}
-                initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
+                initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
-                className={`relative flex items-center ${
-                  index % 2 === 0 ? "justify-end" : "justify-start"
-                } md:justify-between`}
+                className="relative flex items-start md:items-center"
               >
-                <div
-                  className={`w-full md:w-5/12 ${
-                    index % 2 === 0 ? "text-right pr-8" : "text-left pl-8"
-                  }`}
-                >
+                {/* Timeline dot */}
+                <div className="absolute left-4 md:left-1/2 transform -translate-x-1/2 w-4 h-4 bg-purple-400 rounded-full shadow-lg mt-6 md:mt-0" />
+
+                <div className={`w-full pl-12 md:w-5/12 ${
+                  index % 2 === 0
+                    ? "md:pr-8 md:text-right md:ml-auto"
+                    : "md:pl-8 md:mr-auto"
+                }`}>
                   <div className="p-6 bg-card rounded-lg shadow-lg border hover:border-purple-400 transition-colors">
                     <span className="text-purple-400 font-bold">
                       {event.year}
@@ -54,9 +55,6 @@ export function Experience() {
                     </p>
                   </div>
                 </div>
-
-                {/* Timeline dot */}
-                <div className="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-purple-400 rounded-full shadow-lg" />
               </motion.div>
             ))}
           </div>
