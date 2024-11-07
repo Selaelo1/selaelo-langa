@@ -8,6 +8,7 @@ import { Services } from "./components/Services";
 import { Projects } from "./components/Projects";
 import { Blog } from "./components/Blog";
 import { Contact } from "./components/Contact";
+import { TechStack } from "./components/TechStack";
 import { Toaster } from "./components/ui/sonner";
 
 function App() {
@@ -44,6 +45,7 @@ function App() {
           </section>
 
           <About />
+          <TechStack />
           <Experience />
           <Services />
           <Projects />
