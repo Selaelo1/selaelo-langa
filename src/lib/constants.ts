@@ -61,27 +61,36 @@ export const PROJECTS = [
   {
     title: 'PureBody',
     description: 'A comprehensive fitness app for workout tracking, step counting, and trainer-client communication. Features real-time chat, booking management, and progress tracking.',
-    image: 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48',
+    image: 'src/assets/purebody1.jpg',
     tags: ['React', 'Node.js', 'MongoDB', 'Express.js', 'WebSocket'],
-    demoUrl: '#',
-    githubUrl: '#',
+    demoUrl: 'https://purebody.netlify.app',
+    githubUrl: 'https://github.com/Selaelo1/pure-body',
   },
   {
     title: 'SecureBank',
     description: 'An innovative banking app with dual-PIN security system, featuring a distress PIN for emergency situations, along with standard banking functionalities.',
     image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3',
     tags: ['React', 'Node.js', 'MySQL', 'Express.js', 'JWT'],
-    demoUrl: '#',
-    githubUrl: '#',
+    demoUrl: 'https://securbank.netlify.app',
+    githubUrl: 'https://github.com/Selaelo1/secure-bank',
   },
   {
     title: 'CityStays',
     description: 'All-in-one travel platform combining accommodation bookings, flights, car rentals, and event tickets in a seamless experience.',
-    image: 'https://images.unsplash.com/photo-1496417263034-38ec4f0b665a',
+    image: 'src/assets/citystays1.jpg',
     tags: ['React', 'TypeScript', 'Node.js', 'MongoDB', 'API Integration'],
-    demoUrl: '#',
-    githubUrl: '#',
+    demoUrl: 'https://citystays.netlify.app',
+    githubUrl: 'https://github.com/Selaelo1/citystays',
   },
+  {
+    title: 'Wine Estate Website',
+    description: ' Combining wine sales, tastings, vineyard stays, and exclusive events, this platform offers an immersive wine country experience',
+    image: 'src/assets/lefokeni1.jpg',
+    tags: ['React', 'TypeScript', 'Node.js', 'MySql'],
+    demoUrl: 'https://lefokeni-winery.netlify.app',
+    githubUrl: 'https://github.com/Selaelo1/winery-site',
+  }
+
 ];
 
 export const BLOG_POSTS = [
