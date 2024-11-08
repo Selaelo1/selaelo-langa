@@ -2,7 +2,12 @@ import { motion } from "framer-motion";
 import { SERVICES } from "../lib/constants";
 import * as Icons from "lucide-react";
 import { Card, CardContent } from "../components/ui/card";
+import { FC } from "react";
 
+// Define the type for the IconComponent
+type IconComponentType = FC<{ className?: string }>;
+
+// Define the Services component
 export function Services() {
   return (
     <section id="services" className="py-20 bg-background">
@@ -25,7 +30,9 @@ export function Services() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {SERVICES.map((service, index) => {
             // Dynamically access the icon component
-            const IconComponent = Icons[service.icon as keyof typeof Icons];
+            const IconComponent = Icons[
+              service.icon as keyof typeof Icons
+            ] as IconComponentType;
 
             // If IconComponent is undefined, fallback to a default icon (e.g., 'AlertTriangle')
             if (!IconComponent) {
