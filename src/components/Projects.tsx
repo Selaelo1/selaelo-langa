@@ -35,13 +35,12 @@ export function Projects() {
             >
               <Card className="group overflow-hidden">
                 <CardContent className="p-0">
-                  <div className="relative">
+                  <div className="relative overflow-hidden">
                     <img
                       src={project.image}
                       alt={project.title}
-                      className="w-full h-48 object-cover transition-transform group-hover:scale-105"
+                      className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-105"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
                   </div>
                   <div className="p-6">
                     <h3 className="text-xl font-semibold mb-2">
