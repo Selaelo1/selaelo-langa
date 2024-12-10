@@ -69,7 +69,7 @@ export const PROJECTS = [
   {
     title: 'SecureBank',
     description: 'An innovative banking app with dual-PIN security system, featuring a distress PIN for emergency situations, along with standard banking functionalities.',
-    image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3',
+    image: 'src/assets/secure-bank.jpg',
     tags: ['React', 'Node.js', 'MySQL', 'Express.js', 'JWT'],
     demoUrl: 'https://securbank.netlify.app',
     githubUrl: 'https://github.com/Selaelo1/secure-bank',
