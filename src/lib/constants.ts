@@ -68,7 +68,7 @@ export const PROJECTS = [
   },
   {
     title: 'SecureBank',
-    description: 'An innovative banking app with dual-PIN security system, featuring a distress PIN for emergency situations, along with standard banking functionalities.',
+    description: 'An innovative banking app with dual-PIN security system, featuring a distress PIN for emergency situations, along with standard banking functionalities. use 123456 to access normal dashboard and 99999 for under duress dashboard',
     image: 'src/assets/secure-bank.jpg',
     tags: ['React', 'Node.js', 'MySQL', 'Express.js', 'JWT'],
     demoUrl: 'https://securbank.netlify.app',
