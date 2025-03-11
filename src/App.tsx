@@ -25,7 +25,7 @@ function App() {
               </h1>
 
               <p className="text-xl sm:text-2xl mb-8 text-muted-foreground">
-                Full Stack Developer | From Accounting to Coding
+                Full Stack Developer
               </p>
               <div className="flex justify-center space-x-4">
                 <a
