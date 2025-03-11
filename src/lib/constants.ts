@@ -101,7 +101,7 @@ export const PROJECTS = [
     {
     title: 'FiniOS',
     description: 'Financial Operating System that connects all financial platforms in one app, simplifying financial management.',
-    image: 'src/assets/lefokeni1.jpg',
+    image: 'src/assets/finios.jpg',
     tags: ['React', 'TypeScript', 'Node.js', 'MySql'],
     demoUrl: 'https://finios.netlify.app/',
     githubUrl: 'https://github.com/Selaelo1/finios',
