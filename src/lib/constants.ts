@@ -61,7 +61,7 @@ export const PROJECTS = [
   {
     title: 'PureBody',
     description: 'A comprehensive fitness app for workout tracking, step counting, and trainer-client communication. Features real-time chat, booking management, and progress tracking.',
-    image: '../assets/purebody1.jpg',
+    image: '/assets/purebody1.jpg',
     tags: ['React', 'Node.js', 'MongoDB', 'Express.js', 'WebSocket'],
     demoUrl: 'https://purebody.netlify.app',
     githubUrl: 'https://github.com/Selaelo1/pure-body',
