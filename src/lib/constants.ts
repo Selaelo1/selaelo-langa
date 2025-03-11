@@ -89,8 +89,15 @@ export const PROJECTS = [
     tags: ['React', 'TypeScript', 'Node.js', 'MySql'],
     demoUrl: 'https://lefokeni-winery.netlify.app',
     githubUrl: 'https://github.com/Selaelo1/winery-site',
+  },
+  {
+    title: 'ChanuaBlock',
+    description: 'Blockchain-powered investment platform designed to empower individuals and businesses across Africa to participate in global markets with micro-investments',
+    image: 'src/assets/lefokeni1.jpg',
+    tags: ['React', 'TypeScript', 'Node.js', 'MySql'],
+    demoUrl: 'https://chinuablock.netlify.app/',
+    githubUrl: 'https://github.com/Selaelo1/chinua-block',
   }
-
 ];
 
 export const BLOG_POSTS = [
