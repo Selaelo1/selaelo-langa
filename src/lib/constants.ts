@@ -69,7 +69,7 @@ export const PROJECTS = [
   {
     title: 'SecureBank',
     description: 'An innovative banking app with dual-PIN security system, featuring a distress PIN for emergency situations, along with standard banking functionalities. use 123456 to access normal dashboard and 99999 for under duress dashboard',
-    image: './src/assets/secure-bank.jpg',
+    image: '/assets/secure-bank.jpg',
     tags: ['React', 'Node.js', 'MySQL', 'Express.js', 'JWT'],
     demoUrl: 'https://securbank.netlify.app',
     githubUrl: 'https://github.com/Selaelo1/secure-bank',
@@ -77,7 +77,7 @@ export const PROJECTS = [
   {
     title: 'CityStays',
     description: 'All-in-one travel platform combining accommodation bookings, flights, car rentals, and event tickets in a seamless experience.',
-    image: 'src/assets/citystays1.jpg',
+    image: '/assets/citystays1.jpg',
     tags: ['React', 'TypeScript', 'Node.js', 'MongoDB', 'API Integration'],
     demoUrl: 'https://citystays.netlify.app',
     githubUrl: 'https://github.com/Selaelo1/citystays',
@@ -85,7 +85,7 @@ export const PROJECTS = [
   {
     title: 'Wine Estate Website',
     description: ' Combining wine sales, tastings, vineyard stays, and exclusive events, this platform offers an immersive wine country experience',
-    image: 'src/assets/lefokeni1.jpg',
+    image: '/assets/lefokeni1.jpg',
     tags: ['React', 'TypeScript', 'Node.js', 'MySql'],
     demoUrl: 'https://lefokeni-winery.netlify.app',
     githubUrl: 'https://github.com/Selaelo1/winery-site',
@@ -93,7 +93,7 @@ export const PROJECTS = [
   {
     title: 'ChanuaBlock',
     description: 'Blockchain-powered investment platform designed to empower individuals and businesses across Africa to participate in global markets with micro-investments',
-    image: 'src/assets/chanuablock.jpg',
+    image: '/assets/chanuablock.jpg',
     tags: ['React', 'TypeScript', 'Node.js', 'MySql'],
     demoUrl: 'https://chinuablock.netlify.app/',
     githubUrl: 'https://github.com/Selaelo1/chinua-block',
@@ -101,7 +101,7 @@ export const PROJECTS = [
     {
     title: 'FiniOS',
     description: 'Financial Operating System that connects all financial platforms in one app, simplifying financial management.',
-    image: 'src/assets/finios.jpg',
+    image: '/assets/finios.jpg',
     tags: ['React', 'TypeScript', 'Node.js', 'MySql'],
     demoUrl: 'https://finios.netlify.app/',
     githubUrl: 'https://github.com/Selaelo1/finios',
