@@ -29,20 +29,8 @@ export function Contact() {
 
   const onSubmit = async (data: FormData) => {
     try {
-      const response = await fetch(
-        "https://contact-form-backend-y039.onrender.com/send-email",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(data),
-        }
-      );
-
-      if (!response.ok) {
-        throw new Error("Failed to send email");
-      }
+      // Here you would typically send the data to your backend
+      console.log("Form data:", data);
 
       toast({
         title: "Message sent!",
@@ -58,8 +46,9 @@ export function Contact() {
       });
     }
   };
+
   return (
-    <section id="contact" className="py-20 bg-background/50">
+    <section id="contact" className="py-20 bg-background/50 scroll-mt-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
