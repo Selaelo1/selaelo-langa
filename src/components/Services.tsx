@@ -66,9 +66,7 @@ export function Services() {
               >
                 <Card className="group hover:border-purple-400 transition-colors">
                   <CardContent className="p-6">
-                    <div className="mb-4 p-3 bg-purple-400/10 rounded-lg w-fit">
-                      <IconComponent className="h-6 w-6 text-purple-400" />
-                    </div>
+                    <div className="mb-4 p-3 bg-purple-400/10 rounded-lg w-fit"></div>
                     <h3 className="text-xl font-semibold mb-2">
                       {service.title}
                     </h3>
