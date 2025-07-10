@@ -44,8 +44,20 @@ export function Contact() {
 
   const onSubmit = async (data: FormData) => {
     try {
-      // Here you would typically send the data to your backend
-      console.log("Form data:", data);
+      const response = await fetch("http://localhost:5000/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.message || "Failed to send message");
+      }
+
       showToast(
         "Message sent!",
         "Thank you for reaching out. I'll get back to you soon.",
@@ -53,7 +65,12 @@ export function Contact() {
       );
       reset();
     } catch (error) {
-      showToast("Error", "Something went wrong. Please try again.", "error");
+      console.error("Error:", error);
+      showToast(
+        "Error",
+        error.message || "Something went wrong. Please try again.",
+        "error"
+      );
     }
   };
 
