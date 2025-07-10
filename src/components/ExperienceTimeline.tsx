@@ -18,7 +18,8 @@ const experiences = [
       "Mentored developers and aligned tech execution with business goals",
     ],
     technologies: [
-      "Angular 18",
+      "React",
+      "Azure",
       "MongoDB",
       ".NET",
       "RESTful APIs",
@@ -104,8 +105,14 @@ const education = [
   {
     institution: "Boston City Campus",
     degree: "BCom in Accounting",
-    year: "2016-2020",
+    year: "2022-2024",
     type: "degree",
+  },
+  {
+    institution: "Vuleka SSB High School",
+    degree: "National Senior Certificate",
+    year: "2016-2020",
+    type: "NSC",
   },
 ];
 
