@@ -14,6 +14,45 @@ import { Badge } from "./ui/badge";
 const projects = [
   {
     id: 1,
+    title: "FiniOS",
+    description:
+      "A powerful financial integration OS that consolidates all your financial platforms into one unified dashboard. Gain real-time insights into your financial standing with automated tracking, AI-driven analytics, and secure bank-grade synchronization across accounts, investments, and expenses.",
+    image: "/assets/finios.jpg",
+    tags: ["React", "Node.js", "MongoDB", "WebSocket", "AI/ML"],
+    category: "Full Stack",
+    demoUrl: "https://finios.netlify.app",
+    githubUrl: "https://github.com/Selaelo1/finios",
+    featured: true,
+    stats: {
+      security: "256-bit Encryption",
+      syncSpeed: "Real-time Updates",
+      integrations: "50+ Platforms",
+      uptime: "99.99% Reliability",
+      userSatisfaction: "4.9/5",
+    },
+  },
+
+  {
+    id: 2,
+    title: "Chanua Block",
+    description:
+      "A tokenized investment platform unlocking African economic opportunities—from wine farms to cocoa harvests and real estate—with micro-investments starting at just R100. Securely trade asset-backed tokens, track ROI, and empower local businesses through blockchain transparency.",
+    image: "/assets/chanuablock.jpg",
+    tags: ["Blockchain", "Solidity", "React", "Node.js", "Web3.js"],
+    category: "Web3",
+    demoUrl: "https://chinuablock.netlify.app",
+    githubUrl: "https://github.com/Selaelo1/chinua-block",
+    featured: true,
+    stats: {
+      minInvestment: "R100 Tokens",
+      assets: "Wine, Cocoa, Property",
+      blockchain: "Ethereum/Polygon",
+      apy: "8-15% Avg Returns",
+      userGrowth: "10K+ Investors",
+    },
+  },
+  {
+    id: 5,
     title: "PureBody Fitness Platform",
     description:
       "A comprehensive fitness app for workout tracking, step counting, and trainer-client communication. Features real-time chat, booking management, and progress tracking with AI-powered recommendations.",
@@ -30,10 +69,10 @@ const projects = [
     },
   },
   {
-    id: 2,
+    id: 6,
     title: "SecureBank",
     description:
-      "An innovative banking app with dual-PIN security system, featuring a distress PIN for emergency situations, along with standard banking functionalities and real-time fraud detection.",
+      "An innovative banking app with dual-PIN security system, featuring a distress PIN for emergency situations, along with standard banking functionalities and real-time fraud detection. Use 12345 for normal banking and 99999 for duress mode.",
     image: "/assets/secure-bank.jpg",
     tags: ["React", "Node.js", "MySQL", "JWT", "Security"],
     category: "Security",
