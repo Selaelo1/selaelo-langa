@@ -54,7 +54,6 @@ export function Contact() {
       toast({
         title: "Error",
         description: "Something went wrong. Please try again.",
-        variant: "destructive",
       });
     }
   };
