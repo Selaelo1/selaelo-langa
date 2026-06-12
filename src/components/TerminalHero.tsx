@@ -9,7 +9,7 @@ import {
   Calendar,
 } from "lucide-react";
 import { Button } from "./ui/button";
-import "../../public/assets/selaelo-profile.jpeg";
+import "../assets/selaelo-profile.jpeg";
 
 const commands = [
   "npm run selaelo",
