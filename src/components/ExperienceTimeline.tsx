@@ -1,25 +1,24 @@
 import { motion } from "framer-motion";
-import { Calendar, MapPin, Award, TrendingUp } from "lucide-react";
+import { Calendar, MapPin, Award, Briefcase } from "lucide-react";
 
 const experiences = [
   {
     id: 1,
-    company: "Skunkworks Africa",
-    role: "Lead Developer",
+    company: "Skunkworks Africa (Conglomerate)",
+    role: "Lead Frontend Developer",
     period: "January 2025 - Present",
     location: "South Africa",
     type: "Conglomerate",
     description:
-      "Leading technical innovation across Skunkworks Digital, Skunkworks Academy, and LMS platforms. Driving R&D in AI, cloud, and scalable architectures.",
+      "Lead Frontend Developer specialising in Angular and React, focusing on frontend architecture, system scalability, and performance optimisation across multiple platforms and an EdTech LMS.",
     achievements: [
-      "Spearheaded cross-functional engineering teams across multiple business units",
-      "Enhanced LMS with AI-driven learning and offline access for African markets",
-      "Designed high-performance digital platforms with cybersecurity best practices",
-      "Mentored developers and aligned tech execution with business goals",
+      "Lead frontend development across multiple platforms, owning architecture decisions for scalability and performance",
+      "Lead agile engineering teams, mentor developers, and align tech execution with business goals",
+      "Design high-performance digital platforms and mobile-friendly LMS with cybersecurity best practices",
+      "Enhanced Skunkworks Academy's LMS with AI-driven learning, certifications, and offline access",
     ],
     technologies: [
-      "React",
-      "Azure",
+      "Angular 18",
       "MongoDB",
       ".NET",
       "RESTful APIs",
@@ -29,25 +28,26 @@ const experiences = [
   },
   {
     id: 2,
-    company: "CityStays",
-    role: "Full Stack Developer",
-    period: "2023-2024",
+    company: "Enlighten Smiles",
+    role: "Shopify Developer",
+    period: "2023 - 2024",
     location: "Remote",
-    type: "Travel Platform",
+    type: "E-commerce / Healthcare",
     description:
-      "Designed and developed a comprehensive travel platform enabling users to book stays, rent cars, flights, and event tickets.",
+      "Managed two e-commerce storefronts: consumer Shopify store for retail dental products and B2B portal for doctors purchasing professional teeth whitening systems.",
     achievements: [
-      "Built user profiles for hosts and travelers with advanced matching algorithms",
-      "Implemented search and booking functionality with real-time availability",
-      "Integrated secure payment gateway with fraud detection",
-      "Developed car rental and flight booking integrations with major providers",
+      "Built and maintained two platforms with custom themes, navigation, and access controls",
+      "Implemented role-based product visibility and pricing for doctors vs retail customers",
+      "Integrated secure payment gateways and automated inventory sync between platforms",
+      "Customised checkout logic per platform with different tax rules and shipping methods",
     ],
     technologies: [
-      "Angular 18",
-      "MongoDB",
-      ".NET",
-      "RESTful APIs",
-      "Payment APIs",
+      "Shopify Plus",
+      "Shopify",
+      "React",
+      "JavaScript",
+      "Klaviyo",
+      "Liquid",
     ],
     current: false,
   },
@@ -55,24 +55,18 @@ const experiences = [
     id: 3,
     company: "SecureBank",
     role: "Frontend Developer",
-    period: "2021-2023",
+    period: "2019-2023",
     location: "Remote",
     type: "FinTech",
     description:
-      "Developed a secure banking app with innovative dual PIN code functionality for enhanced security and user protection.",
+      "Developed a secure banking app with dual PIN code functionality for enhanced security and user protection.",
     achievements: [
       "Implemented dual PIN system (normal and under duress) for emergency situations",
-      "Built comprehensive account management and transaction tracking",
+      "Built account management and transaction tracking features",
       "Developed real-time fund transfer and payment processing",
       "Created advanced security measures and alert systems",
     ],
-    technologies: [
-      "React",
-      "Node.js",
-      "MongoDB",
-      "TypeScript",
-      "Security APIs",
-    ],
+    technologies: ["React", "Node.js", "MongoDB", "TypeScript", "RESTful APIs"],
     current: false,
   },
 ];
@@ -105,7 +99,7 @@ const education = [
   {
     institution: "Boston City Campus",
     degree: "BCom in Accounting",
-    year: "2022-2024",
+    year: "2024",
     type: "degree",
   },
   {
@@ -120,7 +114,7 @@ export function ExperienceTimeline() {
   return (
     <section
       id="experience"
-      className="py-20 bg-background relative scroll-mt-16"
+      className="py-12 sm:py-20 bg-background relative scroll-mt-16"
     >
       <div className="absolute inset-0 grid-pattern opacity-5"></div>
 
@@ -130,30 +124,31 @@ export function ExperienceTimeline() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
-          <h2 className="text-4xl font-bold gradient-text mb-4">
+          <h2 className="text-3xl sm:text-4xl font-bold gradient-text mb-4">
             Professional Journey
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            From accounting to leading technical innovation - my path to
-            becoming a Full Stack Developer and Technical Leader
+          <p className="text-base sm:text-xl text-muted-foreground max-w-3xl mx-auto px-4">
+            Lead Frontend Developer specialising in Angular and React, with
+            expertise in frontend architecture, scalability, and performance
+            optimisation
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
           {/* Experience Timeline */}
           <div className="lg:col-span-2">
-            <h3 className="text-2xl font-semibold text-foreground mb-8 flex items-center">
-              <TrendingUp className="mr-3 h-6 w-6 text-primary" />
+            <h3 className="text-xl sm:text-2xl font-semibold text-foreground mb-6 sm:mb-8 flex items-center">
+              <Briefcase className="mr-3 h-5 w-5 sm:h-6 sm:w-6 text-primary" />
               Professional Experience
             </h3>
 
             <div className="relative">
-              {/* Timeline line */}
-              <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-accent to-primary"></div>
+              {/* Timeline line - hidden on mobile */}
+              <div className="hidden lg:block absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-primary/50 to-primary"></div>
 
-              <div className="space-y-12">
+              <div className="space-y-8 sm:space-y-12">
                 {experiences.map((exp, index) => (
                   <motion.div
                     key={exp.id}
@@ -163,82 +158,89 @@ export function ExperienceTimeline() {
                     transition={{ duration: 0.6, delay: index * 0.2 }}
                     className="relative"
                   >
-                    {/* Timeline dot */}
+                    {/* Timeline dot - hidden on mobile */}
                     <div
                       className={`
-                      absolute left-6 w-4 h-4 rounded-full border-2 
+                      hidden lg:block absolute left-6 w-4 h-4 rounded-full border-2 
                       ${
                         exp.current
-                          ? "bg-primary border-primary shadow-lg shadow-primary/50"
-                          : "bg-accent border-accent"
+                          ? "bg-primary border-primary shadow-lg shadow-primary/50 animate-pulse"
+                          : "bg-primary/50 border-primary/50"
                       }
                     `}
                     ></div>
 
                     {/* Content */}
-                    <div className="ml-16 terminal-window hover-lift">
+                    <div className="lg:ml-16 terminal-window hover-lift">
                       <div className="terminal-header">
                         <div className="terminal-dot red"></div>
                         <div className="terminal-dot yellow"></div>
                         <div className="terminal-dot green"></div>
-                        <span className="text-sm text-muted-foreground ml-4">
+                        <span className="text-xs sm:text-sm text-muted-foreground ml-2 sm:ml-4 truncate max-w-[150px] sm:max-w-none">
                           {exp.company.toLowerCase().replace(/\s+/g, "-")}
-                          .experience
+                          .exp
                         </span>
                       </div>
 
-                      <div className="p-6 space-y-4">
-                        <div className="flex flex-wrap items-start justify-between gap-4">
+                      <div className="p-4 sm:p-6 space-y-3 sm:space-y-4">
+                        <div className="flex flex-col sm:flex-row sm:flex-wrap sm:items-start sm:justify-between gap-3 sm:gap-4">
                           <div>
-                            <h4 className="text-xl font-semibold text-foreground">
-                              {exp.role}
-                            </h4>
-                            <p className="text-lg text-primary font-medium">
+                            <div className="flex items-center gap-2 flex-wrap">
+                              <h4 className="text-base sm:text-xl font-semibold text-foreground">
+                                {exp.role}
+                              </h4>
+                              {exp.current && (
+                                <span className="px-2 py-0.5 sm:py-1 bg-primary/20 text-primary text-xs rounded-full border border-primary/50">
+                                  Current
+                                </span>
+                              )}
+                            </div>
+                            <p className="text-base sm:text-lg text-primary font-medium mt-1">
                               {exp.company}
                             </p>
-                            <p className="text-sm text-muted-foreground">
+                            <p className="text-xs sm:text-sm text-muted-foreground">
                               {exp.type}
                             </p>
                           </div>
 
-                          <div className="text-right text-sm text-muted-foreground">
-                            <div className="flex items-center">
-                              <Calendar className="mr-1 h-4 w-4" />
+                          <div className="text-left sm:text-right text-xs sm:text-sm text-muted-foreground">
+                            <div className="flex items-center sm:justify-end">
+                              <Calendar className="mr-1 h-3 w-3 sm:h-4 sm:w-4" />
                               {exp.period}
                             </div>
-                            <div className="flex items-center mt-1">
-                              <MapPin className="mr-1 h-4 w-4" />
+                            <div className="flex items-center mt-1 sm:justify-end">
+                              <MapPin className="mr-1 h-3 w-3 sm:h-4 sm:w-4" />
                               {exp.location}
                             </div>
                           </div>
                         </div>
 
-                        <p className="text-muted-foreground">
+                        <p className="text-sm sm:text-base text-foreground/80">
                           {exp.description}
                         </p>
 
                         <div className="space-y-2">
-                          <h5 className="font-medium text-foreground">
+                          <h5 className="font-medium text-foreground text-sm sm:text-base">
                             Key Achievements:
                           </h5>
                           <ul className="space-y-1">
                             {exp.achievements.map((achievement, i) => (
                               <li
                                 key={i}
-                                className="text-sm text-muted-foreground flex items-start"
+                                className="text-xs sm:text-sm text-foreground/70 flex items-start"
                               >
                                 <span className="text-primary mr-2">▸</span>
-                                {achievement}
+                                <span className="flex-1">{achievement}</span>
                               </li>
                             ))}
                           </ul>
                         </div>
 
-                        <div className="flex flex-wrap gap-2">
+                        <div className="flex flex-wrap gap-1.5 sm:gap-2">
                           {exp.technologies.map((tech) => (
                             <span
                               key={tech}
-                              className="px-2 py-1 bg-muted text-muted-foreground text-xs rounded border border-border"
+                              className="px-1.5 sm:px-2 py-0.5 sm:py-1 bg-primary/5 text-foreground/80 text-[10px] sm:text-xs rounded border border-border"
                             >
                               {tech}
                             </span>
@@ -254,12 +256,12 @@ export function ExperienceTimeline() {
 
           {/* Education & Certifications */}
           <div>
-            <h3 className="text-2xl font-semibold text-foreground mb-8 flex items-center">
-              <Award className="mr-3 h-6 w-6 text-accent" />
+            <h3 className="text-xl sm:text-2xl font-semibold text-foreground mb-6 sm:mb-8 flex items-center">
+              <Award className="mr-3 h-5 w-5 sm:h-6 sm:w-6 text-primary" />
               Education & Certifications
             </h3>
 
-            <div className="space-y-6">
+            <div className="space-y-4 sm:space-y-6">
               {education.map((edu, index) => (
                 <motion.div
                   key={index}
@@ -269,19 +271,17 @@ export function ExperienceTimeline() {
                   transition={{ duration: 0.4, delay: index * 0.1 }}
                   className="terminal-window"
                 >
-                  <div className="p-4 space-y-2">
-                    <div className="flex items-start justify-between">
+                  <div className="p-3 sm:p-4 space-y-1 sm:space-y-2">
+                    <div className="flex items-start justify-between gap-2">
                       <div className="flex-1">
-                        <h4 className="font-medium text-foreground text-sm">
+                        <h4 className="font-medium text-foreground text-xs sm:text-sm">
                           {edu.degree}
                         </h4>
-                        <p className="text-accent text-sm">{edu.institution}</p>
+                        <p className="text-primary text-xs sm:text-sm mt-0.5 sm:mt-1">
+                          {edu.institution}
+                        </p>
                       </div>
-                      <span
-                        className={`
-                        px-2 py-1 text-xs rounded
-                      `}
-                      >
+                      <span className="text-[10px] sm:text-xs text-muted-foreground whitespace-nowrap">
                         {edu.year}
                       </span>
                     </div>
@@ -290,55 +290,94 @@ export function ExperienceTimeline() {
               ))}
             </div>
 
-            {/* Skills Summary */}
+            {/* Skills Summary from CV */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: 0.4 }}
-              className="mt-12 terminal-window"
+              className="mt-8 sm:mt-12 terminal-window"
             >
               <div className="terminal-header">
                 <div className="terminal-dot red"></div>
                 <div className="terminal-dot yellow"></div>
                 <div className="terminal-dot green"></div>
-                <span className="text-sm text-muted-foreground ml-4">
+                <span className="text-xs sm:text-sm text-muted-foreground ml-2 sm:ml-4">
                   skills.summary
                 </span>
               </div>
 
-              <div className="p-6 space-y-4">
-                <h4 className="font-semibold text-foreground">
-                  Core Strengths
-                </h4>
-                <div className="space-y-3 text-sm">
-                  <div className="flex justify-between">
-                    <span className="text-muted-foreground">Leadership</span>
-                    <span className="text-primary">Expert</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-muted-foreground">
-                      Full-Stack Development
+              <div className="p-4 sm:p-6 space-y-4 sm:space-y-6">
+                <div>
+                  <h4 className="font-semibold text-foreground text-sm sm:text-base mb-2 sm:mb-3">
+                    Technical Skills
+                  </h4>
+                  <div className="flex flex-wrap gap-1.5 sm:gap-2">
+                    <span className="px-1.5 sm:px-2 py-0.5 sm:py-1 bg-primary/5 text-foreground/80 text-[10px] sm:text-xs rounded border border-border">
+                      REACT
                     </span>
-                    <span className="text-primary">Expert</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-muted-foreground">
-                      System Architecture
+                    <span className="px-1.5 sm:px-2 py-0.5 sm:py-1 bg-primary/5 text-foreground/80 text-[10px] sm:text-xs rounded border border-border">
+                      ANGULAR 18
                     </span>
-                    <span className="text-accent">Advanced</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-muted-foreground">
-                      AI Integration
+                    <span className="px-1.5 sm:px-2 py-0.5 sm:py-1 bg-primary/5 text-foreground/80 text-[10px] sm:text-xs rounded border border-border">
+                      .NET
                     </span>
-                    <span className="text-accent">Advanced</span>
-                  </div>
-                  <div className="flex justify-between">
-                    <span className="text-muted-foreground">
-                      Team Mentoring
+                    <span className="px-1.5 sm:px-2 py-0.5 sm:py-1 bg-primary/5 text-foreground/80 text-[10px] sm:text-xs rounded border border-border">
+                      TYPESCRIPT
                     </span>
-                    <span className="text-primary">Expert</span>
+                    <span className="px-1.5 sm:px-2 py-0.5 sm:py-1 bg-primary/5 text-foreground/80 text-[10px] sm:text-xs rounded border border-border">
+                      TAILWIND
+                    </span>
+                    <span className="px-1.5 sm:px-2 py-0.5 sm:py-1 bg-primary/5 text-foreground/80 text-[10px] sm:text-xs rounded border border-border">
+                      BOOTSTRAP
+                    </span>
+                    <span className="px-1.5 sm:px-2 py-0.5 sm:py-1 bg-primary/5 text-foreground/80 text-[10px] sm:text-xs rounded border border-border">
+                      NODE JS
+                    </span>
+                    <span className="px-1.5 sm:px-2 py-0.5 sm:py-1 bg-primary/5 text-foreground/80 text-[10px] sm:text-xs rounded border border-border">
+                      KLAVIYO
+                    </span>
+                    <span className="px-1.5 sm:px-2 py-0.5 sm:py-1 bg-primary/5 text-foreground/80 text-[10px] sm:text-xs rounded border border-border">
+                      LIQUID
+                    </span>
+                    <span className="px-1.5 sm:px-2 py-0.5 sm:py-1 bg-primary/5 text-foreground/80 text-[10px] sm:text-xs rounded border border-border">
+                      SHOPIFY PLUS
+                    </span>
+                    <span className="px-1.5 sm:px-2 py-0.5 sm:py-1 bg-primary/5 text-foreground/80 text-[10px] sm:text-xs rounded border border-border">
+                      SHOPLINE
+                    </span>
+                    <span className="px-1.5 sm:px-2 py-0.5 sm:py-1 bg-primary/5 text-foreground/80 text-[10px] sm:text-xs rounded border border-border">
+                      RESTful APIs
+                    </span>
+                  </div>
+                </div>
+
+                <div className="pt-3 sm:pt-4 border-t border-border">
+                  <h4 className="font-semibold text-foreground text-sm sm:text-base mb-2 sm:mb-3">
+                    Core Competencies
+                  </h4>
+                  <div className="flex flex-wrap gap-1.5 sm:gap-2">
+                    <span className="px-1.5 sm:px-2 py-0.5 sm:py-1 bg-primary/5 text-foreground/80 text-[10px] sm:text-xs rounded border border-border">
+                      Component Architecture
+                    </span>
+                    <span className="px-1.5 sm:px-2 py-0.5 sm:py-1 bg-primary/5 text-foreground/80 text-[10px] sm:text-xs rounded border border-border">
+                      State Management
+                    </span>
+                    <span className="px-1.5 sm:px-2 py-0.5 sm:py-1 bg-primary/5 text-foreground/80 text-[10px] sm:text-xs rounded border border-border">
+                      Performance Optimisation
+                    </span>
+                    <span className="px-1.5 sm:px-2 py-0.5 sm:py-1 bg-primary/5 text-foreground/80 text-[10px] sm:text-xs rounded border border-border">
+                      Responsive UI
+                    </span>
+                    <span className="px-1.5 sm:px-2 py-0.5 sm:py-1 bg-primary/5 text-foreground/80 text-[10px] sm:text-xs rounded border border-border">
+                      Cross-functional Collaboration
+                    </span>
+                    <span className="px-1.5 sm:px-2 py-0.5 sm:py-1 bg-primary/5 text-foreground/80 text-[10px] sm:text-xs rounded border border-border">
+                      Mentorship
+                    </span>
+                    <span className="px-1.5 sm:px-2 py-0.5 sm:py-1 bg-primary/5 text-foreground/80 text-[10px] sm:text-xs rounded border border-border">
+                      Code Reviews
+                    </span>
                   </div>
                 </div>
               </div>
