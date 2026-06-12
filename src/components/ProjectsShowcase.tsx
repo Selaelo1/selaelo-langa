@@ -11,13 +11,55 @@ import {
 import { Button } from "./ui/button";
 import { Badge } from "./ui/badge";
 
+// Import images from src/assets
+import medmapImg from "../assets/medmap.jpeg";
+import enlightenSmilesImg from "../assets/enlighten-smiles.jpeg";
+import finiosImg from "../assets/finios.jpg";
+import chanuablockImg from "../assets/chanuablock.jpg";
+import securebankImg from "../assets/secure-bank.jpg";
+import citystaysImg from "../assets/citystays1.jpg";
+
 const projects = [
   {
     id: 1,
+    title: "MedMap",
+    description:
+      "A healthcare navigation platform that helps patients find nearby medical facilities, book appointments, and access telemedicine services. Features real-time availability tracking, doctor profiles, and integrated ambulance dispatch for emergencies.",
+    image: medmapImg,
+    tags: ["React", "Node.js", "MongoDB", "Google Maps API", "WebSocket"],
+    category: "Full Stack",
+    demoUrl: "https://medmap.co.za/",
+    githubUrl: null,
+    featured: true,
+    stats: {
+      facilities: "15K+",
+      responseTime: "<5 min",
+      rating: "4.8/5",
+    },
+  },
+  {
+    id: 2,
+    title: "Enlighten Smiles",
+    description:
+      "A modern dental practice management platform offering online appointment scheduling, patient records, treatment planning, and teledentistry consultations. Streamlines clinic operations with automated reminders and digital payment integration.",
+    image: enlightenSmilesImg,
+    tags: ["React", "TypeScript", "Node.js", "PostgreSQL", "Stripe"],
+    category: "E-commerce",
+    demoUrl: "https://patient.enlightensmiles.com/",
+    githubUrl: null,
+    featured: true,
+    stats: {
+      patients: "5K+",
+      appointments: "20K+",
+      satisfaction: "4.9/5",
+    },
+  },
+  {
+    id: 3,
     title: "FiniOS",
     description:
       "A powerful financial integration OS that consolidates all your financial platforms into one unified dashboard. Gain real-time insights into your financial standing with automated tracking, AI-driven analytics, and secure bank-grade synchronization across accounts, investments, and expenses.",
-    image: "/assets/finios.jpg",
+    image: finiosImg,
     tags: ["React", "Node.js", "MongoDB", "WebSocket", "AI/ML"],
     category: "Full Stack",
     demoUrl: "https://finios.netlify.app",
@@ -31,13 +73,12 @@ const projects = [
       userSatisfaction: "4.9/5",
     },
   },
-
   {
-    id: 2,
+    id: 4,
     title: "Chanua Block",
     description:
       "A tokenized investment platform unlocking African economic opportunities—from wine farms to cocoa harvests and real estate—with micro-investments starting at just R100. Securely trade asset-backed tokens, track ROI, and empower local businesses through blockchain transparency.",
-    image: "/assets/chanuablock.jpg",
+    image: chanuablockImg,
     tags: ["Blockchain", "Solidity", "React", "Node.js", "Web3.js"],
     category: "Web3",
     demoUrl: "https://chinuablock.netlify.app",
@@ -53,27 +94,10 @@ const projects = [
   },
   {
     id: 5,
-    title: "PureBody Fitness Platform",
-    description:
-      "A comprehensive fitness app for workout tracking, step counting, and trainer-client communication. Features real-time chat, booking management, and progress tracking with AI-powered recommendations.",
-    image: "/assets/purebody1.jpg",
-    tags: ["React", "Node.js", "MongoDB", "WebSocket", "AI/ML"],
-    category: "Full Stack",
-    demoUrl: "https://purebody.netlify.app",
-    githubUrl: "https://github.com/Selaelo1/pure-body",
-    featured: true,
-    stats: {
-      users: "10K+",
-      performance: "99.9%",
-      rating: "4.8/5",
-    },
-  },
-  {
-    id: 6,
     title: "SecureBank",
     description:
       "An innovative banking app with dual-PIN security system, featuring a distress PIN for emergency situations, along with standard banking functionalities and real-time fraud detection. Use 12345 for normal banking and 99999 for duress mode.",
-    image: "/assets/secure-bank.jpg",
+    image: securebankImg,
     tags: ["React", "Node.js", "MySQL", "JWT", "Security"],
     category: "Security",
     demoUrl: "https://securbank.netlify.app",
@@ -86,11 +110,11 @@ const projects = [
     },
   },
   {
-    id: 3,
+    id: 6,
     title: "CityStays Travel Platform",
     description:
       "All-in-one travel platform combining accommodation bookings, flights, car rentals, and event tickets in a seamless experience with AI-powered recommendations.",
-    image: "/assets/citystays1.jpg",
+    image: citystaysImg,
     tags: ["React", "TypeScript", "Node.js", "MongoDB", "API Integration"],
     category: "E-commerce",
     demoUrl: "https://citystays.netlify.app",
@@ -100,23 +124,6 @@ const projects = [
       bookings: "25K+",
       countries: "50+",
       satisfaction: "4.9/5",
-    },
-  },
-  {
-    id: 4,
-    title: "Lefokeni Wine Estate",
-    description:
-      "Combining wine sales, tastings, vineyard stays, and exclusive events, this platform offers an immersive wine country experience with virtual tours and sommelier consultations.",
-    image: "/assets/lefokeni1.jpg",
-    tags: ["React", "TypeScript", "Node.js", "MySQL", "E-commerce"],
-    category: "E-commerce",
-    demoUrl: "https://lefokeni-winery.netlify.app",
-    githubUrl: "https://github.com/Selaelo1/winery-site",
-    featured: false,
-    stats: {
-      wines: "200+",
-      events: "100+",
-      members: "5K+",
     },
   },
 ];
@@ -133,7 +140,7 @@ const categoryIcons = {
 
 export function ProjectsShowcase() {
   const [selectedCategory, setSelectedCategory] = useState("All");
-  const [hoveredProject, setHoveredProject] = useState<number | null>(null);
+  const [hoveredProject, setHoveredProject] = useState(null);
 
   const filteredProjects =
     selectedCategory === "All"
@@ -173,8 +180,7 @@ export function ProjectsShowcase() {
           className="flex flex-wrap justify-center gap-4 mb-12"
         >
           {categories.map((category) => {
-            const IconComponent =
-              categoryIcons[category as keyof typeof categoryIcons];
+            const IconComponent = categoryIcons[category];
             return (
               <Button
                 key={category}
@@ -252,21 +258,23 @@ export function ProjectsShowcase() {
                               Live Demo
                             </a>
                           </Button>
-                          <Button
-                            size="sm"
-                            variant="outline"
-                            className="border-accent text-accent hover:bg-accent hover:text-accent-foreground"
-                            asChild
-                          >
-                            <a
-                              href={project.githubUrl}
-                              target="_blank"
-                              rel="noopener noreferrer"
+                          {project.githubUrl && (
+                            <Button
+                              size="sm"
+                              variant="outline"
+                              className="border-accent text-accent hover:bg-accent hover:text-accent-foreground"
+                              asChild
                             >
-                              <Github className="mr-2 h-4 w-4" />
-                              Code
-                            </a>
-                          </Button>
+                              <a
+                                href={project.githubUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                <Github className="mr-2 h-4 w-4" />
+                                Code
+                              </a>
+                            </Button>
+                          )}
                         </motion.div>
                       )}
                     </AnimatePresence>
